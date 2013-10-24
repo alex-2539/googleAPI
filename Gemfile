@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 gem 'rails', '3.2.14'
 
@@ -9,8 +10,16 @@ gem 'geocoder'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+group :development, :test do
 
 gem 'sqlite3'
+
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+
+end
 
 
 # Gems used only for assets and not required
